@@ -20,7 +20,7 @@ var Builder = {
     //console.log(creeper.memory.sourceID);
     var source = Game.getObjectById(creeper.memory.sourceID);
     const pathTo = creeper.room.findPath(creeper.pos,source.pos);
-    const pathFrom = creeper.room.findPath(creeper.pos,constructionSite.pos,{ignoreCreeps:true});
+    const pathFrom = creeper.room.findPath(creeper.pos,constructionSite.pos);
 
     if(creeper.memory.goal == 'harvest')
     {

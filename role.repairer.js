@@ -30,7 +30,7 @@ var Repairer = {
       var source = Game.getObjectById(creeper.memory.sourceID);
       var repair = Game.getObjectById(creeper.memory.repairID);
       const pathTo = creeper.room.findPath(creeper.pos,source.pos);
-      const pathFrom = creeper.room.findPath(creeper.pos,repair.pos,{ignoreCreeps:true});
+      const pathFrom = creeper.room.findPath(creeper.pos,repair.pos);
 
       if(creeper.memory.goal == 'harvest')
       {

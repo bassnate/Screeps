@@ -53,7 +53,7 @@ if ((protoPopulation < 1) && (energyAvailable >= 200))
   Spawn0.spawnCreep([WORK,MOVE,CARRY],'Proto'+Math.random());
 }
 
-else if ((harvesterPopulation < 2) && (energyAvailable >= 400))
+else if ((harvesterPopulation < 3) && (energyAvailable >= 400))
 {
   var harvesterName = 'Harvester'+Math.random();
   Spawn0.spawnCreep([WORK,WORK,MOVE,MOVE,CARRY,CARRY],harvesterName);
@@ -63,7 +63,7 @@ else if ((harvesterPopulation < 2) && (energyAvailable >= 400))
   console.log('Making a Harvester');
   //console.log(Game.creeps[upgraderName].memory.sourceID);
 }
-else if ((upgraderPopulation < 2) && (energyAvailable >= 300))
+else if ((upgraderPopulation < 3) && (energyAvailable >= 300))
 {
   var upgraderName = 'Upgrader'+Math.random();
   Spawn0.spawnCreep([WORK,WORK,MOVE,CARRY],upgraderName);
@@ -73,7 +73,7 @@ else if ((upgraderPopulation < 2) && (energyAvailable >= 300))
   console.log('Making an Upgrader');
   //console.log(Game.creeps[upgraderName].memory.sourceID);
 }
-else if ((builderPopulation < 2) && (energyAvailable >= 300))
+else if ((builderPopulation < 3) && (energyAvailable >= 300))
 {
   var builderName = 'Builder'+Math.random();
   Spawn0.spawnCreep([WORK,MOVE,MOVE,CARRY,CARRY],builderName);
@@ -83,10 +83,10 @@ else if ((builderPopulation < 2) && (energyAvailable >= 300))
   console.log('Making a Builder');
   //console.log(Game.creeps[upgraderName].memory.sourceID);
 }
-else if ((repairerPopulation < 1) && (energyAvailable >= 300))
+else if ((repairerPopulation < 1) && (energyAvailable >= 400))
 {
   var repairerName = 'Repairer'+Math.random();
-  Spawn0.spawnCreep([WORK,MOVE,MOVE,CARRY,CARRY],repairerName);
+  Spawn0.spawnCreep([WORK,MOVE,MOVE,MOVE,MOVE,CARRY,CARRY],repairerName);
   Game.creeps[repairerName].memory.role = 'repairer';
   Game.creeps[repairerName].memory.goal = 'harvest';
   Game.creeps[repairerName].memory.sourceID = 'something';
